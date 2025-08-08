@@ -1,0 +1,13 @@
+To write the SDC constraint file best book is - Static Timing Analysis for Nanometer Designs A Practical Approach by J. Bhasker • Rakesh Chadha
+
+There are many constraints, here is few of them in SDC file
+
+opensta comes with openroad tool
+
+give command sta to start 
+
+read_liberty nangate45_slow.lib  \\read liberty file
+read_verilog sta_netlist.v 	\\ read synthesized verilog file
+link_design sta_1		\\read sta_1 module
+read_sdc SDC.sdc       		\\read sdc file
+report_checks			\\give timing report

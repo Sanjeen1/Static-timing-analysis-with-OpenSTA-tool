@@ -1,0 +1,14 @@
+#pre sta analysis (without parasitic)
+read_liberty nangate45_slow.lib
+read_verilog example1.v
+link_design top
+read_sdc example1.sdc
+report_checks
+
+#sdf
+report_annotated_check
+read_sdf example1.sdf
+report_annotated_check
+report_checks
+
+end

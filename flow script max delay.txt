@@ -1,0 +1,9 @@
+read_liberty Nangate45_typ.lib
+read_verilog sta_netlist.v
+link_design sta_1
+
+read_sdc SDC.sdc
+
+report_checks -path_delay max
+
+report_checks -path_delay max -from _239_/CK

@@ -1,0 +1,23 @@
+#pre sta analysis (without parasitic)
+read_liberty nangate45_slow.lib
+read_verilog sta_netlist.v
+link_design sta_1
+read_sdc SDC.sdc
+
+report_checks
+
+#post route analysis
+report_parasitic_annotation
+read_spef example1.dspef
+report_parasitic_annotation
+
+report_checks
+report_checks -path_delay max
+report_checks -path_delay max -digits 4
+report_checks -path_delay max -digits 4 -fields capacitance
+report_checks -path_delay max -digits 4 -fields {list capacitance, slew, input_pins, nets, fanout}
+
+#post cts, hold min analysis
+report_checks -path_delay min
+
+exit

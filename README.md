@@ -5,12 +5,12 @@ A complete workflow for performing static timing analysis using the open-source 
 ---> Static Timing Analysis for setup and hold checks
 
 **Reads industry-standard formats:**
---->Liberty (.lib) cell libraries
---->Verilog netlists (.v)
---->Synopsys Design Constraints (.sdc)
---->Standard Parasitic Exchange Format (.spef)
-Reports critical paths, slack values, and timing violations
-Scriptable via Tcl commands for automation
+--->Liberty (.lib) cell libraries.
+--->Verilog netlists (.v).
+--->Synopsys Design Constraints (.sdc).
+--->Standard Parasitic Exchange Format (.spef).
+Reports critical paths, slack values, and timing violations.
+Scriptable via Tcl commands for automation.
 Works in both pre-layout and post-layout analysis stages.
 
 <img width="820" height="381" alt="1" src="https://github.com/user-attachments/assets/aa9065ec-fc46-4df3-9a9b-d1fe5dd9202c" />
